@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends 'guitartabs/base.html' %}
+
+{% block body_block %}
+
+<h3>Please enter the info for the new song</h3>
+<h3> {{ message }} </h3>
+<div>
+	<form id="song_form" method="post" action=".">
+		{% csrf_token %}
+		{% for field in form.visible_fields %}
+			{{ field.errors }}
+			{{ field.name }}: {{ field }} <br>
+		{% endfor %}
+		<input type='submit' name='submit' value='Create Song'>
+	</form>
+</div>
+<a href=".."><button>Cancel</button></a>
+
+{% endblock %}

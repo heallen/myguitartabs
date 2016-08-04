@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+{% extends 'guitartabs/base.html' %}
+
+{% block body_block %}
+
+	<h1 class='header'>
+		My Guitar Tabs
+	</h1>
+
+	<a href="{% url 'add_song' %}">Add a Song</a>
+	<br>
+	<div id='songs'>
+		<h3 class='header'> Songs </h3>
+		<ul class='itemlist'>
+		{% for song in songlist %}
+			<a href="{{ song.url }}"><li> <strong>{{ song }}</strong> - {{ song.artist }}</li></a>
+		{% endfor %}
+		</ul>
+	</div>
+	<div class="verticalline"></div>
+	<div id='artists'>
+		<h3 class='header'> Artists </h3>
+		<ul class='itemlist'>
+		{% for name, slug in artistlist %}
+			<a href="/artist/{{ slug }}/"><li>{{ name }}</li></a>
+		{% endfor %}
+		</ul>
+	</div>
+
+{% endblock %}
+
+
