@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 
 {% extends 'guitartabs/base.html' %}
+{% load staticfiles %}
 
 {% block body_block %}
-
+	<!-- <img class='headerimg' src="{% static 'images/header.jpeg' %}"> -->
 	<h1 class='header'>
-		My Guitar Tabs
+		<a href='/'>My Guitar Tabs</a>
 	</h1>
 
 	<a href="{% url 'add_song' %}">Add a Song</a>
 	<br>
 	<div id='songs'>
 		<h3 class='header'> Songs </h3>
-		<ul class='itemlist'>
+		<ul>
 		{% for song in songlist %}
 			<a href="{{ song.url }}"><li> <strong>{{ song }}</strong> - {{ song.artist }}</li></a>
 		{% endfor %}
 		</ul>
 	</div>
-	<div class="verticalline"></div>
+	<!-- <div class="verticalline"></div> -->
 	<div id='artists'>
 		<h3 class='header'> Artists </h3>
-		<ul class='itemlist'>
+		<ul>
 		{% for name, slug in artistlist %}
 			<a href="/artist/{{ slug }}/"><li>{{ name }}</li></a>
 		{% endfor %}

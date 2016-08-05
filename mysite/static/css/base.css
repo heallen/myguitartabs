@@ -1,6 +1,10 @@
+{% load staticfiles %}
+
 body{
-	/*background-color:  #C0C0C0;*/
+	background: url(../images/header.jpeg);
+	background-size: cover;
 	color: #000000;
+	font-family: "Helvetica", "Arial", sans-serif;
 }
 
 h1{
@@ -8,26 +12,32 @@ h1{
 }
 
 h1:hover{
-	color: red;
+	color: #F5A9D0;
 }
 
-h3{
-	/*margin-top: 0px;*/
-}
 
 a{
-	color: #000080;
+	color: #E6E6E6;
 	text-decoration: none;
 }
 a:hover{
-	color: blue;
+	color: #F6CEE3;
 }
 
-.itemlist{
-	/*list-style-type: none*/
+ul{
+	border: black solid 1px;
+	border-radius: 5px;
+	background-color: rgba(0, 0, 0, 0.6);
+	color: white;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
-.itemlist li:hover{
+ul li{
+	padding: 1px;
+}
+
+ul li:hover{
 	font-size: 18px;
 }
 
@@ -41,10 +51,12 @@ a:hover{
 }
 
 .header{
-	background-color: #000080;
+	background-color: rgba(0, 0, 0, 0.6);
 	border: black solid 1px;
 	border-radius: 5px;
-	color: white;
+	color: #E6E6E6;
+	padding: 3px;
+
 }
 
 #songs{
