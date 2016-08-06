@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends 'guitartabs/base.html' %}
+
+{% block body_block %}
+
+<h3 class="graybox">Please enter the info for the new category</h3>
+<h3> {{ message }} </h3>
+<div class="graybox">
+	<form id="category_form" method="post" action=".">
+		{% csrf_token %}
+		{% for field in form.visible_fields %}
+			{{ field.errors }}
+			{{ field.label }}: {{ field }} <br> <br>
+		{% endfor %}
+		<input type='submit' name='submit' value='Create Category'>
+	</form>
+	<a href=".."><button>Cancel</button></a>
+</div>
+
+
+{% endblock %}

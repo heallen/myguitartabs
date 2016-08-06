@@ -5,14 +5,16 @@
 
 {% block body_block %}
 	<!-- <img class='headerimg' src="{% static 'images/header.jpeg' %}"> -->
-	<h1 class='header'>
-		<a href='/'>My Guitar Tabs</a>
-	</h1>
 
-	<a href="{% url 'add_song' %}">Add a Song</a>
+	<span>
+		<ul class='navbar'>
+			<li><a href="{% url 'add_song' %}">Add a Song</a></li>
+			<li><a href="{% url 'add_category' %}">Add a Category</a></li>
+		</ul>
+	</span>
 	<br>
 	<div id='songs'>
-		<h3 class='header'> Songs </h3>
+		<h3 class='graybox header'> Songs </h3>
 		<ul>
 		{% for song in songlist %}
 			<a href="{{ song.url }}"><li> <strong>{{ song }}</strong> - {{ song.artist }}</li></a>
@@ -21,10 +23,19 @@
 	</div>
 	<!-- <div class="verticalline"></div> -->
 	<div id='artists'>
-		<h3 class='header'> Artists </h3>
+		<h3 class='graybox header'> Artists </h3>
 		<ul>
 		{% for name, slug in artistlist %}
 			<a href="/artist/{{ slug }}/"><li>{{ name }}</li></a>
+		{% endfor %}
+		</ul>
+	</div>
+
+	<div id='categories'>
+		<h3 class='graybox header'> Categories </h3>
+		<ul>
+		{% for category in categorylist %}
+			<a href="/category/{{ category.category_slug }}/"><li>{{ category.name }}</li></a>
 		{% endfor %}
 		</ul>
 	</div>

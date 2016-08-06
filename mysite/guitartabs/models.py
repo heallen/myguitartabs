@@ -21,3 +21,15 @@ class Song(models.Model):
 
 	def __unicode__(self):
 		return self.name
+
+class Category(models.Model):
+	name = models.CharField(max_length=50)
+	category_slug = models.SlugField()
+	songs = models.ManyToManyField(Song)
+
+	def save(self, *args, **kwargs):
+		self.category_slug = slugify(self.name)
+		super(Category, self).save(*args, **kwargs)
+
+	def __unicode__(self):
+		return self.name

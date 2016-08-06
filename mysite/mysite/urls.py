@@ -21,5 +21,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name='index'),
     url(r'^newsong/$', views.add_song, name='add_song'),
-    url(r'^artist/(?P<artist_slug>[\w\-]+)/$', views.show_artist, name='show_artist')
+    url(r'^newcategory/$', views.add_category, name='add_category'),
+    url(r'^artist/(?P<artist_slug>[\w\-]+)/$', views.show_artist, name='show_artist'),
+    url(r'^category/(?P<category_slug>[\w\-]+)/$', views.show_category, name='show_category')
 ]

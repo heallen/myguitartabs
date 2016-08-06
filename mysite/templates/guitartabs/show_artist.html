@@ -3,14 +3,14 @@
 {% extends 'guitartabs/base.html' %}
 
 {% block body_block %}
-<h2 class="header">{{ artist }}</h2>
+<h2 class="graybox">{{ artist }}</h2>
 
-<ul class='itemlist'>
+<ul>
 {% for song in songlist %}
 	<a href="{{ song.url }}"><li>{{ song }}</li></a>
 {% endfor %}
 </ul>
 
-<a href="/"> Back to Index </a>
+<a href="/" class="graybox"> Back to Index </a>
 
 {% endblock %}

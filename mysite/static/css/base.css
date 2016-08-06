@@ -1,7 +1,7 @@
 {% load staticfiles %}
 
 body{
-	background: url(../images/header.jpeg);
+	background: url(../images/header2.jpeg);
 	background-size: cover;
 	color: #000000;
 	font-family: "Helvetica", "Arial", sans-serif;
@@ -21,7 +21,8 @@ a{
 	text-decoration: none;
 }
 a:hover{
-	color: #F6CEE3;
+	/*color: #F6CEE3;*/
+	color: #CEECF5;
 }
 
 ul{
@@ -50,23 +51,46 @@ ul li:hover{
 	top: 28%;
 }
 
-.header{
+.graybox{
 	background-color: rgba(0, 0, 0, 0.6);
 	border: black solid 1px;
 	border-radius: 5px;
 	color: #E6E6E6;
-	padding: 3px;
+	padding: 5px;
+}
 
+.navbar li{
+	display: inline;
+	padding: 15px;
+}
+
+.navbar{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 5px;
+	list-style-type: none;
+}
+
+.header{
+	padding-left: 10px;
 }
 
 #songs{
-	/*margin-top: 5px;*/
 	float: left;
+	position: absolute;
 	width: 39%;
-	/*border: black 1px solid;*/
 }
+
 #artists{
 	float: right;
-	width: 59%;
-	/*border: black 1px solid;*/
+	position: absolute;
+	right: 31.1%;
+	width: 29%;
+}
+
+#categories{
+	float: right;
+	position: absolute;
+	right: 0.75%;
+	width: 30%;
 }
