@@ -11,15 +11,11 @@ h1{
 	font-size: 42px;
 }
 
-h1:hover{
-	color: #F5A9D0;
-}
-
-
 a{
 	color: #E6E6E6;
 	text-decoration: none;
 }
+
 a:hover{
 	/*color: #F6CEE3;*/
 	color: #CEECF5;
@@ -62,6 +58,10 @@ ul li:hover{
 .navbar li{
 	display: inline;
 	padding: 15px;
+}
+
+.navbar li:hover{
+	font-size: 16px;
 }
 
 .navbar{

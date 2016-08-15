@@ -12,8 +12,9 @@ class SongForm(forms.ModelForm):
 
 class CategoryForm(forms.ModelForm):
 	name = forms.CharField(max_length=50, label="Category Name")
-	songs = forms.ModelMultipleChoiceField(queryset=Song.objects.all())
+	songs = forms.ModelMultipleChoiceField(queryset=Song.objects.all(), 
+		widget=forms.SelectMultiple(attrs={'size': 10}))
 
 	class Meta:
 		model = Category
-		fields = ('name',)
+		fields = ('name', 'songs')

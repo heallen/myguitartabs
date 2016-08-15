@@ -3,8 +3,13 @@
 
 <html>
 	<head>
+		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href='{% static "css/base.css" %}'>
 		<link rel="icon" type="image/x-icon" href='{% static "images/favicon.ico" %}'>
+		<link rel="stylesheet" href="{% static 'js/jqueryui/jquery-ui.min.css' %}">
+		<script src="{% static 'js/jqueryui/external/jquery/jquery.js' %}"></script>
+		<script src="{% static 'js/jqueryui/jquery-ui.min.js' %}"></script>
+		<script type="text/javascript" src='{% static "js/base.js" %}'></script>
 		<title> My Guitar Tabs </title>
 		{% block head_block %}
 		{% endblock %}
