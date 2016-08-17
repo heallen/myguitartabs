@@ -7,7 +7,7 @@
 
 <ul>
 {% for song in songlist %}
-	<a href="{{ song.url }}"><li>{{ song.name }}</li></a>
+	<a href="{{ song.url }}"><li><strong>{{ song.name }}</strong> - {{ song.artist }}</li></a>
 {% endfor %}
 </ul>
 

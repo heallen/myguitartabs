@@ -17,4 +17,5 @@ $(document).ready(function(){
 			$(this).css("color", "#E6E6E6");
 		}
 	);
+
 });
